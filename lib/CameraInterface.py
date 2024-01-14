@@ -20,8 +20,8 @@ class CameraInterface:
 
         fourcc = cv2.VideoWriter_fourcc(*'MJPG')
         self.cap.set(cv2.CAP_PROP_FOURCC, fourcc)
-        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 2560)
-        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 540)
         newFPS = fps
         self.cap.set(cv2.CAP_PROP_FPS, newFPS)
 

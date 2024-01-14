@@ -10,12 +10,12 @@ import queue
 
 class Spine:
 
-    def __init__(self, camera_id=0):
+    def __init__(self, camera=0):
         print ("**** Spine: Initializing spine")
         self.memory = MemoryInterface()
 
-        self.visualCortex = VisualCortex(self.memory, camera_id=camera_id, max_age=12)
-        self.motorCortex = MotorCortex("/dev/ttyUSB0")
+        self.visualCortex = VisualCortex(camera=camera, max_age=10, fps=15)
+        #self.motorCortex = MotorCortex("/dev/ttyUSB0")
         self.shared_flag = [True,]
 
         self.Queue_TrackedPeople = queue.Queue()
